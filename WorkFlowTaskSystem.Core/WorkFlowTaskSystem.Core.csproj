@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Localization\SourceFiles\WorkFlowTaskSystem-zh-CN.xml" />
+    <None Remove="Localization\SourceFiles\WorkFlowTaskSystem.xml" />
+    <None Remove="Session\AbpSessionExtension.cs~RF842009.TMP" />
+    <None Remove="WorkFlowTaskABPConsts.cs~RF74e56a.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\SourceFiles\WorkFlowTaskSystem-zh-CN.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\SourceFiles\WorkFlowTaskSystem.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Abp" Version="3.5.0" />
+    <PackageReference Include="Aspose.Cells" Version="18.10.0" />
+    <PackageReference Include="CHSPinYinConv" Version="1.0.0" />
+    <PackageReference Include="DotNetCore.NPOI" Version="1.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+  </ItemGroup>
+
+</Project>
